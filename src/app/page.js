@@ -108,7 +108,7 @@ export default function Home() {
       title: "Osaka crown door  System",
       description: "Designed and launched Optimized Order Handling System",
       image: "/osaka.png",
-      technologies: ["React", "Node.js", "MongoDB"],
+      technologies: ["PHP", "MySQL", "JavaScript"],
     },
     {
       title: "Stock Management System",
@@ -120,7 +120,7 @@ export default function Home() {
       title: "Mekedonia Management System",
       description: "Business management platform with comprehensive operational features",
       image: "/file.svg",
-      technologies: ["React", "PHP", "MySQL"],
+      technologies: ["Next.js", "Node.js", "MongoDB"],
     },
     {
       title: "EthioDiabetics Health Platform",
@@ -148,27 +148,27 @@ export default function Home() {
     },
     {
       title: "CoolDay Platform",
-      description: "Interactive platform for event management and social engagement",
+      description: "Interactive platform for event management and social engagement built with WordPress",
       image: "/window.svg",
-      technologies: ["React", "Firebase", "TailwindCSS"],
+      technologies: ["WordPress", "PHP", "MySQL"],
     },
     {
       title: "KBW System",
       description: "Knowledge-based workflow management system",
       image: "/file.svg",
-      technologies: ["React", "Node.js", "MySQL"],
+      technologies: ["PHP", "MySQL", "JavaScript"],
     },
     {
       title: "RightTech Solution Website",
-      description: "Corporate website for RightTech Solution PLC",
+      description: "Corporate website for RightTech Solution PLC built with WordPress",
       image: "/globe.svg",
-      technologies: ["Next.js", "TailwindCSS"],
+      technologies: ["WordPress", "PHP", "MySQL"],
     },
     {
       title: "EthioSuggestion Platform",
-      description: "Community feedback and suggestion management system",
+      description: "Community feedback and suggestion management system built with WordPress",
       image: "/window.svg",
-      technologies: ["React", "PHP", "MySQL"],
+      technologies: ["WordPress", "PHP", "MySQL"],
     },
     {
       title: "Kids Study Android App",
@@ -186,7 +186,7 @@ export default function Home() {
       title: "Vital Registration System",
       description: "Government vital records management and registration system",
       image: "/window.svg",
-      technologies: ["React", "Node.js", "MySQL"],
+      technologies: ["PHP", "MySQL", "JavaScript"],
     },
   ];
 
