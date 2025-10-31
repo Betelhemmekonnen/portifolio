@@ -423,7 +423,8 @@ export default function Home() {
                 transition={{ delay: 0.8, duration: 0.8 }}
               >
                 <motion.a 
-                  href="#contact" 
+                  href="/Betelhem Mekonnen (4).pdf" 
+                  download="Betelhem_Mekonnen_CV.pdf"
                   className="inline-block px-10 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-lg font-semibold rounded-full shadow-lg shadow-pink-500/30 hover:shadow-xl hover:shadow-pink-500/50 transition-all"
                   whileHover={{ 
                     scale: 1.05,
