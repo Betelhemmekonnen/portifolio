@@ -88,7 +88,7 @@ export default function Home() {
     { name: "TailwindCSS", level: 92 },
     { name: "HTML5 & CSS3", level: 95 },
     { name: "Node.js & Express", level: 80 },
-    { name: "PHP", level: 82 },
+    { name: "PHP", level: 95 },
     { name: "MySQL", level: 83 },
     { name: "MongoDB", level: 78 },
     { name: "Firebase", level: 75 },
