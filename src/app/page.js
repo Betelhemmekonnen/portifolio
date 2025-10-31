@@ -37,7 +37,7 @@ export default function Home() {
         if (element) {
           const offsetTop = element.offsetTop;
           const height = element.offsetHeight;
-          
+
           if (scrollPosition >= offsetTop && scrollPosition < offsetTop + height) {
             setActiveSection(section);
             break;
@@ -98,47 +98,102 @@ export default function Home() {
 
   const projects = [
     {
-      title: "Telebirr & Chapa Payment Integration",
-      description: "AddisGebeya e-commerce platform with H5 + SuperApp Telebirr and Chapa payment integration for seamless checkout",
-      image: "/globe.svg",
-      technologies: ["php", "Telebirr API", ],
+      title: "EthioAutoSafety System",
+      description: "Complete website, Android app system for Auto Safety PLC",
+      image: "/safety.png",
+      technologies: ["Android", "PHP", "MySQL"],
+      link: "https://ethioautosafety.com/",
+    },
+    {
+      title: "Osaka crown door  System",
+      description: "Designed and launched Optimized Order Handling System",
+      image: "/osaka.png",
+      technologies: ["React", "Node.js", "MongoDB"],
+    },
+    {
+      title: "Stock Management System",
+      description: "Comprehensive inventory and stock tracking solution for businesses",
+      image: "/window.svg",
+      technologies: ["PHP", "MySQL", "JavaScript"],
+    },
+    {
+      title: "Mekedonia Management System",
+      description: "Business management platform with comprehensive operational features",
+      image: "/file.svg",
+      technologies: ["React", "PHP", "MySQL"],
     },
     {
       title: "EthioDiabetics Health Platform",
       description: "Health information and awareness platform built with Next.js and WordPress CMS",
-      image: "/window.svg",
+      image: "/globe.svg",
       technologies: ["Next.js", "WordPress", "TailwindCSS"],
     },
     {
-      title: "EthioAutoSafety System",
-      description: "Complete website, Android app, and stock management system for Auto Safety PLC",
-      image: "/file.svg",
-      technologies: [ "Android for app", "PHP for site"],
-    },
-    {
-      title: "Attendance with Face Detection",
-      description: "Real-time check-in/out system with GPS tracking built using Android Studio (Java)",
-      image: "/globe.svg",
-      technologies: ["Android Studio", "Java", "GPS" , "python"],
-    },
-    {
-      title: "Kids Study App",
-      description: "Educational Android app for children",
+      title: "Blog Platform",
+      description: "Full-stack blogging system with authentication and content management",
       image: "/window.svg",
-      technologies: ["Android", "java"],
+      technologies: ["React.js", "Node.js", "TailwindCSS"],
+    },
+    {
+      title: "Telebirr & Chapa Payment Integration",
+      description: "AddisGebeya e-commerce platform with H5 + SuperApp Telebirr and Chapa payment integration",
+      image: "/file.svg",
+      technologies: ["PHP", "Telebirr API", "Chapa API"],
     },
     {
       title: "EtegeFashion E-commerce",
       description: "Responsive fashion e-commerce frontend built with Next.js",
-      image: "/file.svg",
+      image: "/globe.svg",
       technologies: ["Next.js", "TailwindCSS"],
+    },
+    {
+      title: "CoolDay Platform",
+      description: "Interactive platform for event management and social engagement",
+      image: "/window.svg",
+      technologies: ["React", "Firebase", "TailwindCSS"],
+    },
+    {
+      title: "KBW System",
+      description: "Knowledge-based workflow management system",
+      image: "/file.svg",
+      technologies: ["React", "Node.js", "MySQL"],
+    },
+    {
+      title: "RightTech Solution Website",
+      description: "Corporate website for RightTech Solution PLC",
+      image: "/globe.svg",
+      technologies: ["Next.js", "TailwindCSS"],
+    },
+    {
+      title: "EthioSuggestion Platform",
+      description: "Community feedback and suggestion management system",
+      image: "/window.svg",
+      technologies: ["React", "PHP", "MySQL"],
+    },
+    {
+      title: "Kids Study Android App",
+      description: "Educational Android app for children with interactive learning features",
+      image: "/file.svg",
+      technologies: ["Android Studio", "Java"],
+    },
+    {
+      title: "Attendance System with Face Detection",
+      description: "Real-time check-in/out system with facial recognition and GPS tracking",
+      image: "/globe.svg",
+      technologies: ["Android Studio", "Java", "Python", "GPS"],
+    },
+    {
+      title: "Vital Registration System",
+      description: "Government vital records management and registration system",
+      image: "/window.svg",
+      technologies: ["React", "Node.js", "MySQL"],
     },
   ];
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0a1628] via-[#0d1b2a] to-[#1b263b]">
       {/* Navigation */}
-      <motion.nav 
+      <motion.nav
         className="fixed w-full bg-[#0a1628]/90 backdrop-blur-md z-50 border-b border-white/5"
         initial={{ y: -100 }}
         animate={{ y: 0 }}
@@ -147,25 +202,24 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between h-20">
             <div className="flex items-center">
-              <motion.span 
+              <motion.span
                 className="text-2xl font-bold text-white"
                 whileHover={{ scale: 1.05 }}
               >
                 Portf<span className="text-cyan-400">o</span>lio
               </motion.span>
             </div>
-            
+
             {/* Desktop Menu */}
             <div className="hidden md:flex items-center space-x-8">
               {["Home", "About", "Skills", "Services", "Portfolio", "Contact"].map((item) => (
                 <motion.a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className={`text-sm font-medium ${
-                    activeSection === item.toLowerCase()
-                      ? "text-white" 
-                      : "text-gray-400"
-                  } hover:text-white transition-colors`}
+                  className={`text-sm font-medium ${activeSection === item.toLowerCase()
+                    ? "text-white"
+                    : "text-gray-400"
+                    } hover:text-white transition-colors`}
                   whileHover={{ y: -2 }}
                   whileTap={{ scale: 0.95 }}
                 >
@@ -173,44 +227,45 @@ export default function Home() {
                 </motion.a>
               ))}
             </div>
-            
+
             {/* Mobile menu button & CTA */}
             <div className="flex items-center space-x-4">
-              <motion.button 
+              <motion.a
+                href="#contact"
                 className="hidden md:block px-6 py-2.5 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-sm font-medium rounded-full hover:shadow-lg hover:shadow-pink-500/50 transition-all"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Contact Me
-              </motion.button>
+              </motion.a>
               <button
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 className="md:hidden inline-flex items-center justify-center p-2 rounded-md text-gray-300 hover:text-white focus:outline-none"
               >
-                <motion.svg 
-                  className="h-6 w-6" 
-                  stroke="currentColor" 
-                  fill="none" 
+                <motion.svg
+                  className="h-6 w-6"
+                  stroke="currentColor"
+                  fill="none"
                   viewBox="0 0 24 24"
                   whileHover={{ rotate: 90 }}
                   transition={{ duration: 0.3 }}
                 >
                   {isMenuOpen ? (
-                    <motion.path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth="2" 
-                      d="M6 18L18 6M6 6l12 12" 
+                    <motion.path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
                       initial={{ pathLength: 0 }}
                       animate={{ pathLength: 1 }}
                       transition={{ duration: 0.3 }}
                     />
                   ) : (
-                    <motion.path 
-                      strokeLinecap="round" 
-                      strokeLinejoin="round" 
-                      strokeWidth="2" 
-                      d="M4 6h16M4 12h16M4 18h16" 
+                    <motion.path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M4 6h16M4 12h16M4 18h16"
                       initial={{ pathLength: 0 }}
                       animate={{ pathLength: 1 }}
                       transition={{ duration: 0.3 }}
@@ -221,11 +276,11 @@ export default function Home() {
             </div>
           </div>
         </div>
-        
+
         {/* Mobile Menu */}
         <AnimatePresence>
           {isMenuOpen && (
-            <motion.div 
+            <motion.div
               className="md:hidden border-t border-white/10"
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: "auto" }}
@@ -258,11 +313,11 @@ export default function Home() {
         {/* Background decoration */}
         <div className="absolute top-20 right-0 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl"></div>
         <div className="absolute bottom-0 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
-        
+
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             {/* Profile Image - Left Side */}
-            <motion.div 
+            <motion.div
               className="lg:w-5/12 flex justify-center"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -270,7 +325,7 @@ export default function Home() {
             >
               <div className="relative">
                 {/* Glowing background */}
-                <motion.div 
+                <motion.div
                   className="absolute inset-0 bg-gradient-to-br from-cyan-400 via-blue-500 to-purple-600 rounded-full blur-2xl opacity-60"
                   animate={{
                     scale: [1, 1.1, 1],
@@ -282,9 +337,9 @@ export default function Home() {
                     ease: "easeInOut"
                   }}
                 ></motion.div>
-                
+
                 {/* Profile container with border */}
-                <motion.div 
+                <motion.div
                   className="relative w-72 h-96 md:w-80 md:h-[450px] bg-gradient-to-br from-cyan-400/20 via-blue-500/20 to-purple-600/20 rounded-[40%_60%_70%_30%/60%_30%_70%_40%] border-4 border-cyan-400/30 overflow-hidden shadow-2xl"
                   animate={{
                     borderRadius: [
@@ -310,9 +365,9 @@ export default function Home() {
                     />
                   </div>
                 </motion.div>
-                
+
                 {/* Floating elements */}
-                <motion.div 
+                <motion.div
                   className="absolute -top-6 -left-6 w-12 h-12 bg-cyan-400 rounded-full shadow-lg shadow-cyan-400/50"
                   animate={{
                     y: [0, -20, 0],
@@ -324,7 +379,7 @@ export default function Home() {
                     ease: "easeInOut"
                   }}
                 ></motion.div>
-                <motion.div 
+                <motion.div
                   className="absolute -bottom-6 -right-6 w-10 h-10 bg-purple-500 rounded-full shadow-lg shadow-purple-500/50"
                   animate={{
                     y: [0, 20, 0],
@@ -339,15 +394,15 @@ export default function Home() {
                 ></motion.div>
               </div>
             </motion.div>
-            
+
             {/* Content - Right Side */}
-            <motion.div 
+            <motion.div
               className="lg:w-7/12 text-center lg:text-left"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <motion.h3 
+              <motion.h3
                 className="text-cyan-400 text-xl md:text-2xl font-medium mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -355,7 +410,7 @@ export default function Home() {
               >
                 Hello, I'm
               </motion.h3>
-              <motion.h1 
+              <motion.h1
                 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -363,7 +418,7 @@ export default function Home() {
               >
                 Betelhem Mekonnen
               </motion.h1>
-              <motion.h2 
+              <motion.h2
                 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-300 mb-6"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -382,28 +437,31 @@ export default function Home() {
                   />
                 </span>
               </motion.h2>
-              <motion.p 
+              <motion.p
                 className="mt-6 text-base md:text-lg text-gray-400 max-w-2xl leading-relaxed mx-auto lg:mx-0"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.5, duration: 0.8 }}
               >
-                I am a dedicated Software Engineer with a focus on React.js, Next.js, React Native, and modern web technologies. 
-                I build scalable and efficient web and mobile applications that enhance user experience and achieve business goals. 
+                I am a dedicated Software Engineer with a focus on React.js, Next.js, React Native, and modern web technologies.
+                I build scalable and efficient web and mobile applications that enhance user experience and achieve business goals.
                 With over a year of industry experience, I deliver complete, high-quality solutions using strong technical and problem-solving skills.
               </motion.p>
-              
+
               {/* Social Links */}
-              <motion.div 
+              <motion.div
                 className="mt-8 flex justify-center lg:justify-start gap-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.8 }}
               >
-                {['LinkedIn', 'GitHub', 'Twitter', 'Instagram'].map((platform, index) => (
+                {[
+                  { name: 'LinkedIn', href: 'https://www.linkedin.com/in/betelhem-mekonnen-7b0b86256' },
+                  { name: 'GitHub', href: 'https://github.com/Betelhemmekonnen' },
+                ].map((platform, index) => (
                   <motion.a
-                    key={platform}
-                    href="#"
+                    key={platform.name}
+                    href={platform.href}
                     className="w-11 h-11 flex items-center justify-center rounded-full border-2 border-gray-600 text-gray-400 hover:border-cyan-400 hover:text-cyan-400 hover:shadow-lg hover:shadow-cyan-400/30 transition-all"
                     whileHover={{ y: -5, scale: 1.1 }}
                     whileTap={{ scale: 0.9 }}
@@ -411,22 +469,31 @@ export default function Home() {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.7 + index * 0.1 }}
                   >
-                    <div className="w-5 h-5 bg-gray-500 rounded" />
+                    {platform.name === 'LinkedIn' && (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                      </svg>
+                    )}
+                    {platform.name === 'GitHub' && (
+                      <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                      </svg>
+                    )}
                   </motion.a>
                 ))}
               </motion.div>
-              
-              <motion.div 
+
+              <motion.div
                 className="mt-10"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.8, duration: 0.8 }}
               >
-                <motion.a 
-                  href="/Betelhem Mekonnen (4).pdf" 
+                <motion.a
+                  href="/Betelhem Mekonnen (4).pdf"
                   download="Betelhem_Mekonnen_CV.pdf"
                   className="inline-block px-10 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-lg font-semibold rounded-full shadow-lg shadow-pink-500/30 hover:shadow-xl hover:shadow-pink-500/50 transition-all"
-                  whileHover={{ 
+                  whileHover={{
                     scale: 1.05,
                     boxShadow: "0 0 30px rgba(236, 72, 153, 0.5)"
                   }}
@@ -437,9 +504,9 @@ export default function Home() {
               </motion.div>
             </motion.div>
           </div>
-          
+
           {/* Stats Section */}
-          <motion.div 
+          <motion.div
             className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 max-w-5xl mx-auto"
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
@@ -475,7 +542,7 @@ export default function Home() {
       {/* About Section */}
       <section id="about" className="py-20 bg-[#0f1d2e]/50 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -487,9 +554,9 @@ export default function Home() {
             </h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto rounded-full"></div>
           </motion.div>
-          
+
           <div className="flex flex-col lg:flex-row gap-12 items-center">
-            <motion.div 
+            <motion.div
               className="lg:w-1/2"
               initial={{ opacity: 0, x: -50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -500,16 +567,16 @@ export default function Home() {
                 I'm Betelhem and I'm a <span className="text-cyan-400">Software Engineer</span>
               </h3>
               <p className="text-gray-400 mb-6 text-lg leading-relaxed">
-                I am Betelhem Mekonnen, a dedicated Full-Stack Developer with a focus on React.js, Next.js, 
-                React Native, Node.js, PHP, MySQL, and MongoDB. I build scalable and efficient web and 
+                I am Betelhem Mekonnen, a dedicated Full-Stack Developer with a focus on React.js, Next.js,
+                React Native, Node.js, PHP, MySQL, and MongoDB. I build scalable and efficient web and
                 mobile applications that enhance user experience and achieve business goals.
               </p>
               <p className="text-gray-400 mb-8 text-lg leading-relaxed">
-                With over a year of industry experience, I deliver complete, high-quality solutions using 
-                strong technical and problem-solving skills. I'm passionate about continuous learning, 
+                With over a year of industry experience, I deliver complete, high-quality solutions using
+                strong technical and problem-solving skills. I'm passionate about continuous learning,
                 collaboration, and creating innovative digital experiences.
               </p>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {[
                   { label: 'Name:', value: 'Betelhem Mekonnen' },
@@ -532,7 +599,7 @@ export default function Home() {
                   </motion.div>
                 ))}
               </div>
-              
+
               <motion.div
                 className="mt-10"
                 initial={{ opacity: 0, y: 20 }}
@@ -540,8 +607,8 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.5 }}
               >
-                <motion.a 
-                  href="#contact" 
+                <motion.a
+                  href="#contact"
                   className="inline-block px-8 py-3.5 bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold rounded-full shadow-lg shadow-pink-500/30 hover:shadow-xl hover:shadow-pink-500/50 transition-all"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
@@ -550,8 +617,8 @@ export default function Home() {
                 </motion.a>
               </motion.div>
             </motion.div>
-            
-            <motion.div 
+
+            <motion.div
               className="lg:w-1/2"
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -566,7 +633,7 @@ export default function Home() {
                       year: 'Jan 2024 - Present',
                       title: 'Fullstack Developer',
                       company: 'RightTech Solution PLC, Addis Ababa',
-                      description: 'Focused on developing React, Next.js, and React Native applications. Integrated Telebirr payment system, delivered WordPress sites, and built mobile apps for various clients.'
+                      description: 'At RightTech Solution PLC, I develop and maintain high-quality web and mobile applications, ensuring scalability, usability, and efficiency. I collaborate with teams to deliver tailored digital solutions that meet client needs and enhance business performance.'
                     },
                     {
                       year: 'Jun 2023 - Oct 2023',
@@ -581,7 +648,7 @@ export default function Home() {
                       description: 'Graduated with a Bachelor of Degree in Software Engineering, specializing in web development, mobile applications, and modern software practices.'
                     }
                   ].map((exp, index) => (
-                    <motion.div 
+                    <motion.div
                       key={index}
                       className="relative pl-8 border-l-2 border-cyan-400/30 hover:border-cyan-400 transition-colors"
                       initial={{ opacity: 0, y: 20 }}
@@ -606,7 +673,7 @@ export default function Home() {
       {/* Skills Section */}
       <section id="skills" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -618,7 +685,7 @@ export default function Home() {
             </h2>
             <div className="w-24 h-1.5 bg-gradient-to-r from-cyan-400 to-purple-600 mx-auto rounded-full"></div>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Left column - Technical Skills with bars */}
             <motion.div
@@ -632,7 +699,7 @@ export default function Home() {
               </h3>
               <div className="space-y-8">
                 {skills.map((skill, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -644,7 +711,7 @@ export default function Home() {
                       <span className="text-cyan-400 font-bold text-lg">{skill.level}%</span>
                     </div>
                     <div className="h-3 bg-white/10 rounded-full overflow-hidden backdrop-blur-sm">
-                      <motion.div 
+                      <motion.div
                         className="h-full bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full shadow-lg shadow-cyan-400/50"
                         style={{ width: 0 }}
                         initial={{ width: 0 }}
@@ -657,7 +724,7 @@ export default function Home() {
                 ))}
               </div>
             </motion.div>
-            
+
             {/* Right column - Professional Skills with icons */}
             <motion.div
               initial={{ opacity: 0, x: 50 }}
@@ -679,8 +746,8 @@ export default function Home() {
                   "Agile Methodology",
                   "Organization"
                 ].map((skill, index) => (
-                  <motion.div 
-                    key={index} 
+                  <motion.div
+                    key={index}
                     className="relative group"
                     initial={{ opacity: 0, scale: 0.8 }}
                     whileInView={{ opacity: 1, scale: 1 }}
@@ -708,7 +775,7 @@ export default function Home() {
       {/* Projects Section */}
       <section id="portfolio" className="py-20 bg-[#0f1d2e]/50 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -723,11 +790,11 @@ export default function Home() {
               Explore my latest projects showcasing creativity, innovation, and technical excellence
             </p>
           </motion.div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
-              <motion.div 
-                key={index} 
+              <motion.div
+                key={index}
                 className="group relative bg-white/5 backdrop-blur-sm rounded-2xl overflow-hidden border border-white/10 hover:border-cyan-400/50 transition-all"
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -736,16 +803,25 @@ export default function Home() {
                 whileHover={{ y: -10 }}
               >
                 <div className="relative h-56 bg-gradient-to-br from-cyan-500/20 to-purple-600/20 overflow-hidden">
-                  <motion.div 
+                  <motion.div
                     className="absolute inset-0 flex items-center justify-center bg-gradient-to-br from-cyan-400/10 to-purple-600/10"
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.3 }}
                   >
-                    <div className="w-24 h-24 bg-white/10 backdrop-blur-sm rounded-2xl border-2 border-dashed border-white/30 flex items-center justify-center" >
-                      <svg className="w-12 h-12 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                    </div>
+                    {project.image ? (
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        className="object-cover"
+                      />
+                    ) : (
+                      <div className="w-24 h-24 bg-white/10 backdrop-blur-sm rounded-2xl border-2 border-dashed border-white/30 flex items-center justify-center">
+                        <svg className="w-12 h-12 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                        </svg>
+                      </div>
+                    )}
                   </motion.div>
                   <div className="absolute inset-0 bg-gradient-to-t from-[#0a1628] via-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 </div>
@@ -754,8 +830,8 @@ export default function Home() {
                   <p className="text-gray-400 mb-4 leading-relaxed">{project.description}</p>
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.map((tech, techIndex) => (
-                      <motion.span 
-                        key={techIndex} 
+                      <motion.span
+                        key={techIndex}
                         className="px-3 py-1 bg-cyan-400/10 border border-cyan-400/30 text-cyan-400 text-sm rounded-full"
                         whileHover={{ scale: 1.05, backgroundColor: "rgba(34, 211, 238, 0.2)" }}
                       >
@@ -764,14 +840,26 @@ export default function Home() {
                     ))}
                   </div>
                   <div className="flex gap-4">
-                    <motion.button 
-                      className="flex-1 py-2.5 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-400/30 transition-all"
-                      whileHover={{ scale: 1.02 }}
-                      whileTap={{ scale: 0.98 }}
-                    >
-                      Live Demo
-                    </motion.button>
-                    <motion.button 
+                    {project.link ? (
+                      <motion.a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex-1 py-2.5 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-400/30 transition-all text-center"
+                        whileHover={{ scale: 1.02 }}
+                        whileTap={{ scale: 0.98 }}
+                      >
+                        Live Demo
+                      </motion.a>
+                    ) : (
+                      <motion.button
+                        className="flex-1 py-2.5 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-400/30 transition-all opacity-50 cursor-not-allowed"
+                        disabled
+                      >
+                        Coming Soon
+                      </motion.button>
+                    )}
+                    <motion.button
                       className="p-2.5 bg-white/5 border border-white/10 text-gray-300 rounded-lg hover:bg-white/10 hover:border-cyan-400/50 hover:text-cyan-400 transition-all"
                       whileHover={{ scale: 1.05, rotate: 5 }}
                       whileTap={{ scale: 0.95 }}
@@ -785,17 +873,17 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-          
-          <motion.div 
+
+          <motion.div
             className="text-center mt-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <motion.button 
+            <motion.button
               className="px-8 py-4 bg-transparent border-2 border-cyan-400 text-cyan-400 text-lg font-semibold rounded-full hover:bg-cyan-400 hover:text-[#0a1628] transition-all"
-              whileHover={{ 
+              whileHover={{
                 scale: 1.05,
                 boxShadow: "0 0 30px rgba(34, 211, 238, 0.4)"
               }}
@@ -810,7 +898,7 @@ export default function Home() {
       {/* Contact Section */}
       <section id="contact" className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <motion.div 
+          <motion.div
             className="text-center mb-16"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -825,9 +913,9 @@ export default function Home() {
               Have a project in mind? Let's work together to create something amazing!
             </p>
           </motion.div>
-          
+
           <div className="max-w-6xl mx-auto">
-            <motion.div 
+            <motion.div
               className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -869,7 +957,7 @@ export default function Home() {
               >
                 <div className="w-20 h-20 mb-6 flex items-center justify-center bg-gradient-to-br from-green-500/20 to-green-600/20 rounded-2xl group-hover:from-green-500/30 group-hover:to-green-600/30 transition-all">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-green-500" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-green-500 transition-colors">WhatsApp</h3>
@@ -891,7 +979,7 @@ export default function Home() {
               >
                 <div className="w-20 h-20 mb-6 flex items-center justify-center bg-gradient-to-br from-cyan-400/20 to-blue-600/20 rounded-2xl group-hover:from-cyan-400/30 group-hover:to-blue-600/30 transition-all">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-cyan-400" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                    <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">Telegram</h3>
@@ -913,7 +1001,7 @@ export default function Home() {
               >
                 <div className="w-20 h-20 mb-6 flex items-center justify-center bg-gradient-to-br from-blue-500/20 to-blue-700/20 rounded-2xl group-hover:from-blue-500/30 group-hover:to-blue-700/30 transition-all">
                   <svg xmlns="http://www.w3.org/2000/svg" className="h-10 w-10 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-blue-500 transition-colors">LinkedIn</h3>
@@ -930,12 +1018,12 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ delay: 0.4, duration: 0.7 }}
           >
-            
+
             <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 border border-white/10">
               <h3 className="text-2xl font-bold text-white mb-8 text-center">
                 Additional Contact Info
               </h3>
-              
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {[
                   {
@@ -960,7 +1048,7 @@ export default function Home() {
                     href: null
                   }
                 ].map((item, index) => (
-                  <motion.div 
+                  <motion.div
                     key={index}
                     className="flex items-start gap-4 p-4 bg-white/5 rounded-xl hover:bg-white/10 transition-all group"
                     initial={{ opacity: 0, x: 20 }}
@@ -984,8 +1072,8 @@ export default function Home() {
                   </motion.div>
                 ))}
               </div>
-              
-              <motion.div 
+
+              <motion.div
                 className="mt-10 pt-8 border-t border-white/10"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -994,12 +1082,15 @@ export default function Home() {
               >
                 <h4 className="text-lg font-semibold text-white mb-4 text-center">Follow Me</h4>
                 <div className="flex justify-center gap-4">
-                  {['GitHub', 'LinkedIn', 'Twitter', 'Instagram'].map((platform, index) => (
-                    <motion.a 
+                  {[
+                    { name: 'GitHub', href: 'https://github.com/Betelhemmekonnen' },
+                    { name: 'LinkedIn', href: 'https://www.linkedin.com/in/betelhem-mekonnen-7b0b86256' },
+                  ].map((platform, index) => (
+                    <motion.a
                       key={index}
-                      href="#" 
+                      href={platform.href}
                       className="w-12 h-12 flex items-center justify-center bg-white/5 border border-white/10 rounded-xl text-gray-400 hover:bg-gradient-to-br hover:from-cyan-400/20 hover:to-purple-600/20 hover:border-cyan-400/50 hover:text-cyan-400 transition-all"
-                      whileHover={{ 
+                      whileHover={{
                         y: -5,
                         scale: 1.1
                       }}
@@ -1009,7 +1100,16 @@ export default function Home() {
                       viewport={{ once: true }}
                       transition={{ delay: 0.5 + index * 0.1 }}
                     >
-                      <div className="w-5 h-5 bg-gray-500 rounded" />
+                      {platform.name === 'GitHub' && (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                        </svg>
+                      )}
+                      {platform.name === 'LinkedIn' && (
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                      )}
                     </motion.a>
                   ))}
                 </div>
@@ -1018,64 +1118,6 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-[#0a1016] border-t border-white/10 py-12 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <motion.div 
-              className="text-center md:text-left"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <span className="text-2xl font-bold text-white">
-                Portf<span className="text-cyan-400">o</span>lio
-              </span>
-              <p className="mt-2 text-gray-400">
-                Creating beautiful digital experiences
-              </p>
-            </motion.div>
-            
-            <motion.div 
-              className="flex gap-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              {['GitHub', 'LinkedIn', 'Twitter', 'Instagram'].map((platform, index) => (
-                <motion.a 
-                  key={index}
-                  href="#" 
-                  className="w-10 h-10 flex items-center justify-center rounded-lg bg-white/5 border border-white/10 text-gray-400 hover:bg-gradient-to-br hover:from-cyan-400/20 hover:to-purple-600/20 hover:border-cyan-400/50 hover:text-cyan-400 transition-all"
-                  whileHover={{ 
-                    y: -5,
-                    scale: 1.1
-                  }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <span className="sr-only">{platform}</span>
-                  <div className="w-5 h-5 bg-gray-500 rounded" />
-                </motion.a>
-              ))}
-            </motion.div>
-          </div>
-          
-          <motion.div 
-            className="mt-8 pt-8 border-t border-white/10 text-center"
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-          >
-            <p className="text-gray-400">
-              &copy; 2024 Betelhem Mekonnen. All rights reserved.
-            </p>
-          </motion.div>
-        </div>
-      </footer>
     </div>
   );
 }
