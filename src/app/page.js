@@ -99,7 +99,7 @@ export default function Home() {
   const projects = [
     {
       title: "EthioAutoSafety System",
-      description: "Complete website, Android app system for Auto Safety PLC",
+      description: "Complete website for them VAS service and Android app system for Auto Safety PLC",
       image: "/placeholder-project.svg",
       technologies: ["Android", "PHP", "MySQL"],
       link: "https://ethioautosafety.com/",
@@ -118,7 +118,7 @@ export default function Home() {
     },
     {
       title: "Mekedonia Management System",
-      description: "Business management platform with comprehensive operational features",
+      description: " management platform with comprehensive operational features",
       image: "/placeholder-project.svg",
       technologies: ["Next.js", "Node.js", "MongoDB"],
     },
@@ -135,10 +135,10 @@ export default function Home() {
       technologies: ["React.js", "Node.js", "TailwindCSS"],
     },
     {
-      title: "Telebirr & Chapa Payment Integration",
-      description: "AddisGebeya e-commerce platform with H5 + SuperApp Telebirr and Chapa payment integration",
+      title: "Telebirr Payment Integration",
+      description: "AddisGebeya e-commerce platform with H5 Integration with SuperApp for them subscription based service ",
       image: "/placeholder-project.svg",
-      technologies: ["PHP", "Telebirr API", "Chapa API"],
+      technologies: ["PHP", "Telebirr API"],
     },
     {
       title: "EtegeFashion E-commerce",
@@ -148,13 +148,13 @@ export default function Home() {
     },
     {
       title: "CoolDay Platform",
-      description: "Interactive platform for event management and social engagement built with WordPress",
+      description: "Interactive platform for social engagement built with WordPress and stockmanagment system",
       image: "/placeholder-project.svg",
       technologies: ["WordPress", "PHP", "MySQL"],
     },
     {
       title: "KBW System",
-      description: "Knowledge-based workflow management system",
+      description: "Interactive platform for social engagement built and stockmanagment",
       image: "/placeholder-project.svg",
       technologies: ["PHP", "MySQL", "JavaScript"],
     },
@@ -166,7 +166,7 @@ export default function Home() {
     },
     {
       title: "EthioSuggestion Platform",
-      description: "Community feedback and suggestion management system built with WordPress",
+      description: "Complete website for them VAS service with WordPress",
       image: "/placeholder-project.svg",
       technologies: ["WordPress", "PHP", "MySQL"],
     },
