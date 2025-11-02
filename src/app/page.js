@@ -139,36 +139,42 @@ export default function Home() {
       description: "AddisGebeya e-commerce platform with H5 Integration with SuperApp for them subscription based service ",
       image: "/placeholder-project.svg",
       technologies: ["PHP", "Telebirr API"],
+      link: "https://addisgebeya.com/",
     },
     {
       title: "EtegeFashion E-commerce",
       description: "Responsive fashion e-commerce frontend built with Next.js",
       image: "/placeholder-project.svg",
       technologies: ["Next.js", "TailwindCSS"],
+      link: "https://etegefront-5eim.vercel.app/",
     },
     {
       title: "CoolDay Platform",
       description: "Interactive platform for social engagement built with WordPress and stockmanagment system",
       image: "/placeholder-project.svg",
       technologies: ["WordPress", "PHP", "MySQL"],
+      link: "https://cooldayethiopia.com/",
     },
     {
       title: "KBW System",
       description: "Interactive platform for social engagement built and stockmanagment",
       image: "/placeholder-project.svg",
       technologies: ["PHP", "MySQL", "JavaScript"],
+      link: "https://kbwimporter.com/",
     },
     {
       title: "RightTech Solution Website",
       description: "Corporate website for RightTech Solution PLC built with WordPress",
       image: "/placeholder-project.svg",
       technologies: ["WordPress", "PHP", "MySQL"],
+      link: "https://righttechconsulting.com/",
     },
     {
       title: "EthioSuggestion Platform",
       description: "Complete website for them VAS service with WordPress",
       image: "/placeholder-project.svg",
       technologies: ["WordPress", "PHP", "MySQL"],
+      link: "https://ethiosuggestion.com/",
     },
     {
       title: "Kids Study Android App",
@@ -853,10 +859,10 @@ export default function Home() {
                       </motion.a>
                     ) : (
                       <motion.button
-                        className="flex-1 py-2.5 bg-gradient-to-r from-cyan-400 to-blue-500 text-white text-sm font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-400/30 transition-all opacity-50 cursor-not-allowed"
+                        className="flex-1 py-2.5 bg-gradient-to-r from-gray-600 to-gray-700 text-white text-sm font-semibold rounded-lg transition-all opacity-80 cursor-not-allowed"
                         disabled
                       >
-                        Coming Soon
+                        Private/Not Deployed
                       </motion.button>
                     )}
                     <motion.button
