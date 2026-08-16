@@ -127,6 +127,7 @@ export default function Home() {
       description: "Health information and awareness platform built with Next.js and WordPress CMS",
       image: "/placeholder-project.svg",
       technologies: ["Next.js", "WordPress", "TailwindCSS"],
+      link: "https://ethdiabetes.org/",
     },
     {
       title: "Blog Platform",
