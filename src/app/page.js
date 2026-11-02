@@ -503,7 +503,7 @@ export default function Home() {
                 transition={{ delay: 0.8, duration: 0.8 }}
               >
                 <motion.a
-                  href="/Betelhem Mekonnen (4).pdf"
+                  href="/Betelhem Mekonnen.pdf"
                   download="Betelhem_Mekonnen_CV.pdf"
                   className="inline-block px-10 py-4 bg-gradient-to-r from-pink-500 to-purple-600 text-white text-lg font-semibold rounded-full shadow-lg shadow-pink-500/30 hover:shadow-xl hover:shadow-pink-500/50 transition-all"
                   whileHover={{
@@ -643,10 +643,10 @@ export default function Home() {
                 <div className="space-y-8">
                   {[
                     {
-                      year: 'Jan 2024 - Present',
+                      year: 'Jan 2024 - Oct 31, 2026',
                       title: 'Fullstack Developer',
                       company: 'RightTech Solution PLC, Addis Ababa',
-                      description: 'At RightTech Solution PLC, I develop and maintain high-quality web and mobile applications, ensuring scalability, usability, and efficiency. I collaborate with teams to deliver tailored digital solutions that meet client needs and enhance business performance.'
+                      description: 'At RightTech Solution PLC, I developed and maintained high-quality web and mobile applications, ensuring scalability, usability, and efficiency. I collaborated with teams to deliver tailored digital solutions that met client needs and enhanced business performance.'
                     },
                     {
                       year: 'Jun 2023 - Oct 2023',
