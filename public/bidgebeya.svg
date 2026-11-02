@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradients -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a1628" />
+      <stop offset="50%" stop-color="#0f1d36" />
+      <stop offset="100%" stop-color="#1b1c3a" />
+    </linearGradient>
+    <linearGradient id="cyanPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" />
+      <stop offset="100%" stop-color="#a855f7" />
+    </linearGradient>
+    <linearGradient id="accentGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ec4899" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#0f172a" stop-opacity="0.9" />
+    </linearGradient>
+    
+    <!-- Filter Glow -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bgGradient)" />
+
+  <!-- Ambient Glow Orbs -->
+  <circle cx="160" cy="120" r="130" fill="#22d3ee" opacity="0.12" filter="url(#glow)" />
+  <circle cx="640" cy="320" r="150" fill="#a855f7" opacity="0.15" filter="url(#glow)" />
+  <circle cx="400" cy="225" r="80" fill="#ec4899" opacity="0.08" filter="url(#glow)" />
+
+  <!-- Grid Pattern Overlay -->
+  <g opacity="0.08" stroke="#ffffff" stroke-width="1">
+    <line x1="0" y1="75" x2="800" y2="75" />
+    <line x1="0" y1="150" x2="800" y2="150" />
+    <line x1="0" y1="225" x2="800" y2="225" />
+    <line x1="0" y1="300" x2="800" y2="300" />
+    <line x1="0" y1="375" x2="800" y2="375" />
+    <line x1="100" y1="0" x2="100" y2="450" />
+    <line x1="200" y1="0" x2="200" y2="450" />
+    <line x1="300" y1="0" x2="300" y2="450" />
+    <line x1="400" y1="0" x2="400" y2="450" />
+    <line x1="500" y1="0" x2="500" y2="450" />
+    <line x1="600" y1="0" x2="600" y2="450" />
+    <line x1="700" y1="0" x2="700" y2="450" />
+  </g>
+
+  <!-- Top Badge / Header Tag -->
+  <rect x="270" y="28" width="260" height="32" rx="16" fill="#22d3ee" fill-opacity="0.1" stroke="#22d3ee" stroke-opacity="0.3" stroke-width="1.5" />
+  <circle cx="286" cy="44" r="5" fill="#22d3ee" />
+  <text x="300" y="49" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="700" fill="#22d3ee" letter-spacing="1.5">REVERSE E-COMMERCE</text>
+
+  <!-- Left: Buyer Request Card (Demand Side) -->
+  <g transform="translate(60, 90)">
+    <rect width="280" height="270" rx="16" fill="url(#cardGrad)" stroke="#38bdf8" stroke-opacity="0.4" stroke-width="1.5" />
+    
+    <!-- Buyer Header -->
+    <rect x="16" y="16" width="36" height="36" rx="18" fill="#38bdf8" fill-opacity="0.2" />
+    <circle cx="34" cy="30" r="6" fill="#38bdf8" />
+    <path d="M26 44 C26 38 42 38 42 44" fill="#38bdf8" />
+    <text x="62" y="32" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Buyer's Demand Post</text>
+    <text x="62" y="47" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Active RFP • Open for Bids</text>
+
+    <!-- Request Details -->
+    <rect x="16" y="68" width="248" height="58" rx="8" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+    <text x="28" y="90" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">Custom Batch Order</text>
+    <text x="28" y="110" font-family="system-ui, sans-serif" font-size="11" fill="#64748b">Specs: Premium Quality • Qty: 100</text>
+
+    <!-- Target Budget Badge -->
+    <rect x="16" y="138" width="248" height="42" rx="8" fill="#22d3ee" fill-opacity="0.1" stroke="#22d3ee" stroke-opacity="0.3" stroke-width="1" />
+    <text x="28" y="163" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Buyer's Target Budget:</text>
+    <text x="180" y="164" font-family="system-ui, sans-serif" font-size="15" font-weight="bold" fill="#22d3ee">$2,500 Max</text>
+
+    <!-- Progress indicator -->
+    <text x="16" y="210" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Bids Received:</text>
+    <text x="220" y="210" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#38bdf8">4 Vendors</text>
+    <rect x="16" y="222" width="248" height="6" rx="3" fill="#334155" />
+    <rect x="16" y="222" width="180" height="6" rx="3" fill="url(#cyanPurple)" />
+    
+    <text x="16" y="250" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Reverse auction ends in 04:12:00</text>
+  </g>
+
+  <!-- Center: Dynamic Bid Matching Connector -->
+  <g transform="translate(355, 175)">
+    <!-- Animated Flow Arrows -->
+    <circle cx="45" cy="50" r="32" fill="#0f172a" stroke="url(#cyanPurple)" stroke-width="2" />
+    
+    <!-- Reverse arrows icon -->
+    <path d="M35 44 L55 44 M47 36 L55 44 L47 52" stroke="#22d3ee" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+    <path d="M55 56 L35 56 M43 48 L35 56 L43 64" stroke="#ec4899" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+
+    <!-- Pulse rings -->
+    <circle cx="45" cy="50" r="42" fill="none" stroke="#22d3ee" stroke-opacity="0.25" stroke-dasharray="4 4" />
+  </g>
+
+  <!-- Right: Seller Bids (Supply Competition Side) -->
+  <g transform="translate(460, 90)">
+    <rect width="280" height="270" rx="16" fill="url(#cardGrad)" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1.5" />
+    
+    <text x="20" y="36" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">Seller Bids &amp; Offers</text>
+    <text x="20" y="52" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Competitive Real-Time Pricing</text>
+
+    <!-- Bid 1: Winner / Best Offer -->
+    <rect x="16" y="70" width="248" height="54" rx="8" fill="#10b981" fill-opacity="0.12" stroke="#10b981" stroke-opacity="0.5" stroke-width="1.5" />
+    <circle cx="34" cy="97" r="10" fill="#10b981" fill-opacity="0.3" />
+    <path d="M30 97 L33 100 L39 94" stroke="#10b981" stroke-width="2" fill="none" stroke-linecap="round" />
+    <text x="52" y="92" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Vendor Alpha</text>
+    <text x="52" y="108" font-family="system-ui, sans-serif" font-size="10" fill="#34d399">★ 4.9 • Best Offer (Lowest Bid)</text>
+    <text x="200" y="102" font-family="system-ui, sans-serif" font-size="16" font-weight="bold" fill="#10b981">$2,150</text>
+
+    <!-- Bid 2 -->
+    <rect x="16" y="132" width="248" height="50" rx="8" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+    <circle cx="34" cy="157" r="10" fill="#6366f1" fill-opacity="0.2" />
+    <text x="31" y="161" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#818cf8">B</text>
+    <text x="52" y="153" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">Prime Suppliers</text>
+    <text x="52" y="169" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Verified Vendor • 2-Day Delivery</text>
+    <text x="205" y="162" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#cbd5e1">$2,290</text>
+
+    <!-- Bid 3 -->
+    <rect x="16" y="190" width="248" height="50" rx="8" fill="#0f172a" fill-opacity="0.8" stroke="#334155" stroke-width="1" />
+    <circle cx="34" cy="215" r="10" fill="#ec4899" fill-opacity="0.2" />
+    <text x="31" y="219" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#f472b6">C</text>
+    <text x="52" y="211" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">Global Trading Co.</text>
+    <text x="52" y="227" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Standard Shipping • Escrow Ready</text>
+    <text x="205" y="220" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#94a3b8">$2,420</text>
+  </g>
+
+  <!-- Bottom Platform Brand Banner -->
+  <g transform="translate(220, 385)">
+    <rect width="360" height="42" rx="21" fill="#0f172a" stroke="url(#cyanPurple)" stroke-width="1.5" />
+    <text x="180" y="26" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">
+      <tspan fill="#22d3ee">BidGebeya</tspan>
+      <tspan fill="#94a3b8"> | </tspan>
+      <tspan fill="#f1f5f9">Buyer-Driven Marketplace</tspan>
+    </text>
+  </g>
+</svg>
