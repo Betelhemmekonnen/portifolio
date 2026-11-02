@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Betelhem Mekonnen - Software Engineer Portfolio",
-  description: "Fullstack developer specializing in React, Next.js, React Native, and modern web technologies",
+  description: "Fullstack developer specializing in php ,React, Next.js, and modern web technologies",
 };
 
 export default function RootLayout({ children }) {
