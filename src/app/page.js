@@ -98,16 +98,22 @@ export default function Home() {
 
   const projects = [
     {
+      title: "BidGebeya - Reverse E-Commerce",
+      description: "Buyer-driven e-commerce marketplace where buyers post custom product requests and target budgets while verified sellers submit competitive real-time bids",
+      image: "/bidgebeya.svg",
+      technologies: ["Next.js", "Node.js", "TailwindCSS", "MongoDB"],
+    },
+    {
       title: "EthioAutoSafety System",
       description: "Complete website for them VAS service and Android app system for Auto Safety PLC",
-      image: "/placeholder-project.svg",
+      image: "/safety.png",
       technologies: ["Android", "PHP", "MySQL"],
       link: "https://ethioautosafety.com/",
     },
     {
       title: "Osaka crown door  System",
       description: "Designed and launched Optimized Order Handling System",
-      image: "/placeholder-project.svg",
+      image: "/osaka.png",
       technologies: ["PHP", "MySQL", "JavaScript"],
     },
     {
@@ -521,7 +527,7 @@ export default function Home() {
           >
             {[
               { number: '2+', label: 'Years of', sublabel: 'Experience' },
-              { number: '15+', label: 'Projects', sublabel: 'Completed' },
+              { number: '16+', label: 'Projects', sublabel: 'Completed' },
               { number: '10+', label: 'Technologies', sublabel: 'Mastered' },
               { number: '15+', label: 'Satisfied', sublabel: 'Clients' }
             ].map((stat, index) => (
